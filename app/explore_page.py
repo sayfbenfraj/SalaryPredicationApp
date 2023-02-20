@@ -30,7 +30,7 @@ def clear_experience(x):
 
 @st.cache_resource
 def load_data():
-    df = pd.read_csv("data\survey_results_public.csv")
+    df = pd.read_csv("data/survey_results_public.csv")
     df = df[["Country","EdLevel","YearsCodePro","Employment","ConvertedCompYearly"]]
     df = df.rename({"ConvertedCompYearly": "Salary"}, axis=1)
     df = df[df["Salary"].notnull()]
